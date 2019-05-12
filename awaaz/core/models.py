@@ -109,7 +109,7 @@ class Task(models.Model):
 
 class SubTask(models.Model):
     task = models.ForeignKey(
-        'Project', blank=True, null=True, related_name='tasks_subtasks')
+        'Task', blank=True, null=True, related_name='tasks_subtasks')
     created_by = models.ForeignKey(
         'User', blank=True, null=True, related_name='created_tasks')
     edited_by = models.ForeignKey('User', blank=True, null=True)
